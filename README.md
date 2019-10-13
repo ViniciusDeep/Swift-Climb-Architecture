@@ -14,11 +14,11 @@ https://user-images.githubusercontent.com/32227073/66717437-65884580-edaf-11e9-8
 App is a layer of content your application, you can have many layers of apps, imagine that you have apps white label, you can use multi-target to reuse another components, in Plugins like a Service or in Reusable Layer, like a customize Cell 
 
 ### Constructor
-This layer has responsible to construct your app and define and set where to go, 
+This layer has responsible to construct your app and define and set where to go, and also  where you can make your construction configuration and navigation
 
 
 ### Features
-
+Feature layer is where every feature of your app will be made with their respective layers
 
 ### Business
 
