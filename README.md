@@ -34,6 +34,16 @@ Even though I haven't written any tests yet, the whole project is completely tes
 ## Getting Started
 In Example, you can see how this Architeture works
 
+## Projects that use Climb:
+* [Sigma](https://github.com/ViniciusDeep/Sigma) 
+* [Digital Space](https://github.com/ViniciusDeep/Digital-Space) 
+
+
+## Author 
+
+* [Vinicius Deep](https://github.com/ViniciusDeep) 
+* [Matheus Dasmasceno](https://github.com/damascenomatheus) 
+
 
 ## License
 
