@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7918F6BC235B711600CBF97E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918F6BB235B711600CBF97E /* AppDelegate.swift */; };
+		7918F6BE235B711600CBF97E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918F6BD235B711600CBF97E /* SceneDelegate.swift */; };
+		7918F6C5235B711A00CBF97E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7918F6C4235B711A00CBF97E /* Assets.xcassets */; };
+		7918F6C8235B711A00CBF97E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7918F6C6235B711A00CBF97E /* LaunchScreen.storyboard */; };
+		7918F6D3235B711A00CBF97E /* StalkiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918F6D2235B711A00CBF97E /* StalkiTests.swift */; };
+		7983F97A235B71ED00E24113 /* Constructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7983F979235B71ED00E24113 /* Constructor.swift */; };
+		7983F97F235B734500E24113 /* ListUsersMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7983F97E235B734500E24113 /* ListUsersMainView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7918F6CF235B711A00CBF97E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7918F6B0235B711600CBF97E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7918F6B7235B711600CBF97E;
+			remoteInfo = Stalki;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7918F6B8235B711600CBF97E /* Stalki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stalki.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7918F6BB235B711600CBF97E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7918F6BD235B711600CBF97E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7918F6C4235B711A00CBF97E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7918F6C7235B711A00CBF97E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7918F6C9235B711A00CBF97E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7918F6CE235B711A00CBF97E /* StalkiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StalkiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7918F6D2235B711A00CBF97E /* StalkiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StalkiTests.swift; sourceTree = "<group>"; };
+		7918F6D4235B711A00CBF97E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7983F979235B71ED00E24113 /* Constructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constructor.swift; sourceTree = "<group>"; };
+		7983F97E235B734500E24113 /* ListUsersMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUsersMainView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7918F6B5235B711600CBF97E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7918F6CB235B711A00CBF97E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7918F6AF235B711600CBF97E = {
+			isa = PBXGroup;
+			children = (
+				7918F6BA235B711600CBF97E /* Stalki */,
+				7918F6D1235B711A00CBF97E /* StalkiTests */,
+				7918F6B9235B711600CBF97E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7918F6B9235B711600CBF97E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7918F6B8235B711600CBF97E /* Stalki.app */,
+				7918F6CE235B711A00CBF97E /* StalkiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7918F6BA235B711600CBF97E /* Stalki */ = {
+			isa = PBXGroup;
+			children = (
+				7983F977235B71AA00E24113 /* App */,
+				7983F976235B719E00E24113 /* Entities */,
+				7983F975235B719400E24113 /* Plugins */,
+				7983F974235B718F00E24113 /* ReusableLayer */,
+				7918F6BB235B711600CBF97E /* AppDelegate.swift */,
+				7918F6BD235B711600CBF97E /* SceneDelegate.swift */,
+				7918F6C4235B711A00CBF97E /* Assets.xcassets */,
+				7918F6C6235B711A00CBF97E /* LaunchScreen.storyboard */,
+				7918F6C9235B711A00CBF97E /* Info.plist */,
+			);
+			path = Stalki;
+			sourceTree = "<group>";
+		};
+		7918F6D1235B711A00CBF97E /* StalkiTests */ = {
+			isa = PBXGroup;
+			children = (
+				7918F6D2235B711A00CBF97E /* StalkiTests.swift */,
+				7918F6D4235B711A00CBF97E /* Info.plist */,
+			);
+			path = StalkiTests;
+			sourceTree = "<group>";
+		};
+		7983F973235B718700E24113 /* Constructor */ = {
+			isa = PBXGroup;
+			children = (
+				7983F979235B71ED00E24113 /* Constructor.swift */,
+			);
+			path = Constructor;
+			sourceTree = "<group>";
+		};
+		7983F974235B718F00E24113 /* ReusableLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReusableLayer;
+			sourceTree = "<group>";
+		};
+		7983F975235B719400E24113 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		7983F976235B719E00E24113 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		7983F977235B71AA00E24113 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7983F973235B718700E24113 /* Constructor */,
+				7983F978235B71B200E24113 /* Features */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7983F978235B71B200E24113 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				7983F97B235B732400E24113 /* ListUsers */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		7983F97B235B732400E24113 /* ListUsers */ = {
+			isa = PBXGroup;
+			children = (
+				7983F97D235B733600E24113 /* ViewModel */,
+				7983F97C235B732F00E24113 /* View */,
+			);
+			path = ListUsers;
+			sourceTree = "<group>";
+		};
+		7983F97C235B732F00E24113 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7983F97E235B734500E24113 /* ListUsersMainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7983F97D235B733600E24113 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7918F6B7235B711600CBF97E /* Stalki */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7918F6D7235B711A00CBF97E /* Build configuration list for PBXNativeTarget "Stalki" */;
+			buildPhases = (
+				7918F6B4235B711600CBF97E /* Sources */,
+				7918F6B5235B711600CBF97E /* Frameworks */,
+				7918F6B6235B711600CBF97E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Stalki;
+			productName = Stalki;
+			productReference = 7918F6B8235B711600CBF97E /* Stalki.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7918F6CD235B711A00CBF97E /* StalkiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7918F6DA235B711A00CBF97E /* Build configuration list for PBXNativeTarget "StalkiTests" */;
+			buildPhases = (
+				7918F6CA235B711A00CBF97E /* Sources */,
+				7918F6CB235B711A00CBF97E /* Frameworks */,
+				7918F6CC235B711A00CBF97E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7918F6D0235B711A00CBF97E /* PBXTargetDependency */,
+			);
+			name = StalkiTests;
+			productName = StalkiTests;
+			productReference = 7918F6CE235B711A00CBF97E /* StalkiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7918F6B0235B711600CBF97E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Vinicius Mangueira";
+				TargetAttributes = {
+					7918F6B7235B711600CBF97E = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					7918F6CD235B711A00CBF97E = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 7918F6B7235B711600CBF97E;
+					};
+				};
+			};
+			buildConfigurationList = 7918F6B3235B711600CBF97E /* Build configuration list for PBXProject "Stalki" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7918F6AF235B711600CBF97E;
+			productRefGroup = 7918F6B9235B711600CBF97E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7918F6B7235B711600CBF97E /* Stalki */,
+				7918F6CD235B711A00CBF97E /* StalkiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7918F6B6235B711600CBF97E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7918F6C8235B711A00CBF97E /* LaunchScreen.storyboard in Resources */,
+				7918F6C5235B711A00CBF97E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7918F6CC235B711A00CBF97E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7918F6B4235B711600CBF97E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7983F97F235B734500E24113 /* ListUsersMainView.swift in Sources */,
+				7918F6BC235B711600CBF97E /* AppDelegate.swift in Sources */,
+				7918F6BE235B711600CBF97E /* SceneDelegate.swift in Sources */,
+				7983F97A235B71ED00E24113 /* Constructor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7918F6CA235B711A00CBF97E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7918F6D3235B711A00CBF97E /* StalkiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7918F6D0235B711A00CBF97E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7918F6B7235B711600CBF97E /* Stalki */;
+			targetProxy = 7918F6CF235B711A00CBF97E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7918F6C6235B711A00CBF97E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7918F6C7235B711A00CBF97E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7918F6D5235B711A00CBF97E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7918F6D6235B711A00CBF97E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7918F6D8235B711A00CBF97E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6FYGZ29HL;
+				INFOPLIST_FILE = Stalki/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.academy.Stalki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7918F6D9235B711A00CBF97E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6FYGZ29HL;
+				INFOPLIST_FILE = Stalki/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.academy.Stalki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7918F6DB235B711A00CBF97E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6FYGZ29HL;
+				INFOPLIST_FILE = StalkiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.academy.StalkiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stalki.app/Stalki";
+			};
+			name = Debug;
+		};
+		7918F6DC235B711A00CBF97E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6FYGZ29HL;
+				INFOPLIST_FILE = StalkiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.academy.StalkiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stalki.app/Stalki";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7918F6B3235B711600CBF97E /* Build configuration list for PBXProject "Stalki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7918F6D5235B711A00CBF97E /* Debug */,
+				7918F6D6235B711A00CBF97E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7918F6D7235B711A00CBF97E /* Build configuration list for PBXNativeTarget "Stalki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7918F6D8235B711A00CBF97E /* Debug */,
+				7918F6D9235B711A00CBF97E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7918F6DA235B711A00CBF97E /* Build configuration list for PBXNativeTarget "StalkiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7918F6DB235B711A00CBF97E /* Debug */,
+				7918F6DC235B711A00CBF97E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7918F6B0235B711600CBF97E /* Project object */;
+}
