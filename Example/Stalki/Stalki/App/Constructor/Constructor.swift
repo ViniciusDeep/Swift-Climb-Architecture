@@ -12,6 +12,12 @@ struct Constructor {
  
     static func getWindow(windowScene: UIWindowScene) -> UIWindow {
         let navigation = UINavigationController(rootViewController: ListUserMainView())
+        navigation.navigationBar.isTranslucent = false
+            navigation.navigationBar.barTintColor = .navigationColor
+            navigation.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.titleColor]
+            navigation.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.titleColor]
+            navigation.view.backgroundColor =  .darkBackgroundColor
+
         let window = UIWindow(windowScene: windowScene)
         window.rootViewController = navigation
         window.makeKeyAndVisible()
