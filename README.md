@@ -16,21 +16,25 @@ App is a layer of content your application, you can have many layers of apps, im
 ### Constructor
 This layer has responsible to construct your app and define and set where to go, and also  where you can make your construction configuration and navigation
 
-
 ### Features
 Feature layer is where every feature of your app will be made with their respective layers
 
 ### Business
-
+This layer represent the business behind each feature, to make your code more testable, your business receives by 
+dependency injection another layers to connect of your app, like a Service, Repository.
 
 ### Controllers
+Controller is your view and has a responsible of view, with a respective methods like a ```swift  viewDidLoad```, ```swift  viewWillAppear``` you can should to set your customView at your controller and your controller made a bind of your components
 
 
+### AppTests
 
-## Tests
-
-Even though I haven't written any tests yet, the whole project is completely testable, since all layers are being isolated by interfaces, as suggested by the SOLID principles.
+Even though I haven't written any tests yet, the whole project is completely testable, since all layers are being isolated by interfaces, as suggested by the SOLID principles, each feature 
 
 ## Getting Started
+In Example, you can see how this Architeture works
 
 
+## License
+
+**Climb Architeture** is under MIT license. See the [LICENSE](LICENSE) file for more info.
