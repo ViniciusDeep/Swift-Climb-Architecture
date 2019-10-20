@@ -10,15 +10,14 @@ import UIKit
 
 class ListUserContentView: UIView {
     
-    
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(ListUserCell.self, forCellReuseIdentifier: ListUserCell.reuseIdentifier)
-        tableView.rowHeight = 100
+        tableView.rowHeight = 150
+        tableView.separatorStyle = .none
         tableView.backgroundColor = .backgroundColor
         return tableView
     }()
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)

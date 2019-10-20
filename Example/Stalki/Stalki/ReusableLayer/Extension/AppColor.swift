@@ -10,6 +10,7 @@ import UIKit
 
 extension UIColor {
     static let darkBackgroundColor = #colorLiteral(red: 0.06666666667, green: 0.06666666667, blue: 0.1294117647, alpha: 1)
+    static let tableViewColor = UIColor(red:1, green:1, blue:1, alpha:1.0)
     static let backgroundColor = UIColor(red:0.97, green:0.98, blue:1.00, alpha:1.0)
     static let navigationColor = #colorLiteral(red: 0.06666666667, green: 0.06666666667, blue: 0.1294117647, alpha: 1)
     static let subBackground = #colorLiteral(red: 0.231372549, green: 0.2352941176, blue: 0.3333333333, alpha: 1)

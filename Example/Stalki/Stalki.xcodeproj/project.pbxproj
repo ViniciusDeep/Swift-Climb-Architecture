@@ -24,6 +24,8 @@
 		79E74104235B974600371FDA /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E74103235B974600371FDA /* Then.swift */; };
 		79E74106235B97FC00371FDA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E74105235B97FC00371FDA /* User.swift */; };
 		79E74108235BC2E900371FDA /* ListUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E74107235BC2E800371FDA /* ListUserCell.swift */; };
+		79E7410A235BF6EE00371FDA /* ListUserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E74109235BF6EE00371FDA /* ListUserCellViewModel.swift */; };
+		79E7410C235C0A1B00371FDA /* CardUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7410B235C0A1B00371FDA /* CardUserView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		79E74103235B974600371FDA /* Then.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		79E74105235B97FC00371FDA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		79E74107235BC2E800371FDA /* ListUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUserCell.swift; sourceTree = "<group>"; };
+		79E74109235BF6EE00371FDA /* ListUserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUserCellViewModel.swift; sourceTree = "<group>"; };
+		79E7410B235C0A1B00371FDA /* CardUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUserView.swift; sourceTree = "<group>"; };
 		8589CC58D61ED76C2510F7FD /* Pods_Stalki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stalki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95AF3B94F19935D0B594921 /* Pods-StalkiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StalkiTests.debug.xcconfig"; path = "Target Support Files/Pods-StalkiTests/Pods-StalkiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C7ED31BA1F1CBF541A43B9DA /* Pods-Stalki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stalki.release.xcconfig"; path = "Target Support Files/Pods-Stalki/Pods-Stalki.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 				7983F97E235B734500E24113 /* ListUsersMainView.swift */,
 				79E740FD235B922200371FDA /* ListUsersContentView.swift */,
 				79E74107235BC2E800371FDA /* ListUserCell.swift */,
+				79E7410B235C0A1B00371FDA /* CardUserView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 		7983F97D235B733600E24113 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				79E74109235BF6EE00371FDA /* ListUserCellViewModel.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -434,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79E7410A235BF6EE00371FDA /* ListUserCellViewModel.swift in Sources */,
 				79E74108235BC2E900371FDA /* ListUserCell.swift in Sources */,
 				7983F97F235B734500E24113 /* ListUsersMainView.swift in Sources */,
 				79E740FE235B922200371FDA /* ListUsersContentView.swift in Sources */,
@@ -446,6 +453,7 @@
 				79E74104235B974600371FDA /* Then.swift in Sources */,
 				79E74101235B94E800371FDA /* CBuilder.swift in Sources */,
 				79E74106235B97FC00371FDA /* User.swift in Sources */,
+				79E7410C235C0A1B00371FDA /* CardUserView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

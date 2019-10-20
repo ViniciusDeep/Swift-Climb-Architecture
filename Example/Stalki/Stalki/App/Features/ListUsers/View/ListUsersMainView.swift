@@ -36,10 +36,7 @@ class ListUserMainView: UIViewController {
        }
        .bind(to: contentView.tableView.rx.items(cellIdentifier: ListUserCell.reuseIdentifier)) { index, model, cell in
         guard let listUserCell = cell as? ListUserCell else {return}
-        
-        listUserCell.userName.text = model.userName
-        guard let imageUrl = URL(string: model.imageUrl) else {return}
-        listUserCell.profileImage.sd_setImage(with: imageUrl)
+        listUserCell.viewModel = ListUserCellViewModel(user: model)
        }
        .disposed(by: disposeBag)
     }
