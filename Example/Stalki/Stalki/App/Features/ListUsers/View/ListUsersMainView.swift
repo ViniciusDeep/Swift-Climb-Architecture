@@ -8,6 +8,7 @@
 
 import RxCocoa
 import RxSwift
+import SDWebImage
 
 class ListUserMainView: UIViewController {
     
@@ -33,8 +34,12 @@ class ListUserMainView: UIViewController {
        .flatMap { request -> Observable<[User]> in
          return self.apiClient.send(apiRequest: request)
        }
-       .bind(to: contentView.tableView.rx.items(cellIdentifier: "cellId")) { index, model, cell in
-        cell.textLabel?.text = model.login
+       .bind(to: contentView.tableView.rx.items(cellIdentifier: ListUserCell.reuseIdentifier)) { index, model, cell in
+        guard let listUserCell = cell as? ListUserCell else {return}
+        
+        listUserCell.userName.text = model.userName
+        guard let imageUrl = URL(string: model.imageUrl) else {return}
+        listUserCell.profileImage.sd_setImage(with: imageUrl)
        }
        .disposed(by: disposeBag)
     }

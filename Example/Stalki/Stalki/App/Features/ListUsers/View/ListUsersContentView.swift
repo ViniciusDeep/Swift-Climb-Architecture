@@ -13,7 +13,9 @@ class ListUserContentView: UIView {
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
+        tableView.register(ListUserCell.self, forCellReuseIdentifier: ListUserCell.reuseIdentifier)
+        tableView.rowHeight = 100
+        tableView.backgroundColor = .backgroundColor
         return tableView
     }()
     
@@ -36,7 +38,4 @@ class ListUserContentView: UIView {
     func setupConstraints() {
         tableView.cBuild(make: .fillSuperview)
     }
-    
-    
-    
 }
