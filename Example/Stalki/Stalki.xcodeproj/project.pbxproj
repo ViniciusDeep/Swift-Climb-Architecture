@@ -14,6 +14,8 @@
 		790ECD8D235CBDAB007BBA1B /* ConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790ECD8C235CBDAB007BBA1B /* ConfigurableView.swift */; };
 		790ECD8F235CBF73007BBA1B /* InsideUserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790ECD8E235CBF73007BBA1B /* InsideUserHeader.swift */; };
 		790ECD91235CC31C007BBA1B /* InsideUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790ECD90235CC31C007BBA1B /* InsideUserViewModel.swift */; };
+		790ECD93235D0379007BBA1B /* InsideUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790ECD92235D0379007BBA1B /* InsideUserService.swift */; };
+		790ECD95235D087A007BBA1B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790ECD94235D087A007BBA1B /* Event.swift */; };
 		7918F6BC235B711600CBF97E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918F6BB235B711600CBF97E /* AppDelegate.swift */; };
 		7918F6BE235B711600CBF97E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918F6BD235B711600CBF97E /* SceneDelegate.swift */; };
 		7918F6C5235B711A00CBF97E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7918F6C4235B711A00CBF97E /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		790ECD8C235CBDAB007BBA1B /* ConfigurableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableView.swift; sourceTree = "<group>"; };
 		790ECD8E235CBF73007BBA1B /* InsideUserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideUserHeader.swift; sourceTree = "<group>"; };
 		790ECD90235CC31C007BBA1B /* InsideUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideUserViewModel.swift; sourceTree = "<group>"; };
+		790ECD92235D0379007BBA1B /* InsideUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideUserService.swift; sourceTree = "<group>"; };
+		790ECD94235D087A007BBA1B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		7918F6B8235B711600CBF97E /* Stalki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stalki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7918F6BB235B711600CBF97E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7918F6BD235B711600CBF97E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				790ECD90235CC31C007BBA1B /* InsideUserViewModel.swift */,
+				790ECD92235D0379007BBA1B /* InsideUserService.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				79E74105235B97FC00371FDA /* User.swift */,
+				790ECD94235D087A007BBA1B /* Event.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -501,10 +507,12 @@
 				79E740FA235B7F5400371FDA /* AppColor.swift in Sources */,
 				790ECD91235CC31C007BBA1B /* InsideUserViewModel.swift in Sources */,
 				79E74104235B974600371FDA /* Then.swift in Sources */,
+				790ECD93235D0379007BBA1B /* InsideUserService.swift in Sources */,
 				790ECD8D235CBDAB007BBA1B /* ConfigurableView.swift in Sources */,
 				79E74101235B94E800371FDA /* CBuilder.swift in Sources */,
 				790ECD8F235CBF73007BBA1B /* InsideUserHeader.swift in Sources */,
 				79E74106235B97FC00371FDA /* User.swift in Sources */,
+				790ECD95235D087A007BBA1B /* Event.swift in Sources */,
 				79E7410C235C0A1B00371FDA /* CardUserView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

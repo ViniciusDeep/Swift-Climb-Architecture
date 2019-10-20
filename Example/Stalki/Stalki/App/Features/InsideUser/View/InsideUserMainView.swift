@@ -17,8 +17,6 @@ class InsideUserMainView: UIViewController {
     
     let disposeBag = DisposeBag()
     
-    
-    
     convenience init(_ user: User) {
         self.init()
         self.viewModel = InsideUserViewModel(user)
@@ -30,6 +28,11 @@ class InsideUserMainView: UIViewController {
         view = contentView
         contentView.tableView.rx.setDelegate(self)
         .disposed(by: disposeBag)
+        bindUI()
+    }
+    
+    fileprivate func bindUI() {
+        
     }
 }
 
@@ -40,12 +43,11 @@ extension InsideUserMainView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
+        cell.backgroundColor = .black
         return cell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return InsideUserHeader()
     }
-    
-    
 }

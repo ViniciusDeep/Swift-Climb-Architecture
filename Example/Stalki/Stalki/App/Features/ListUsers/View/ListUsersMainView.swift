@@ -31,7 +31,7 @@ class ListUserMainView: UIViewController {
         contentView.tableView.rx.modelSelected(User.self).map{
             InsideUserMainView($0)
         }.subscribe(onNext: { [weak self] userViewController in
-            self?.present(userViewController, animated: true, completion: nil)
+            self?.navigationController?.pushViewController(userViewController, animated: true)
             }).disposed(by: disposeBag)
         
         

@@ -17,6 +17,13 @@ class InsideUserHeader: UIView, ConfigurableView {
         $0.layer.masksToBounds = true
     }
     
+    let userName = UILabel().then{
+        $0.text = "DevXoul"
+        $0.lineBreakMode = .byWordWrapping
+        $0.font = UIFont.boldSystemFont(ofSize: 16)
+    }
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -27,7 +34,7 @@ class InsideUserHeader: UIView, ConfigurableView {
     }
     
     func buildViewHierarchy() {
-          addSubviews([profileImage])
+          addSubviews([profileImage, userName])
       }
       
       func setupConstraints() {
@@ -39,5 +46,14 @@ class InsideUserHeader: UIView, ConfigurableView {
         
         profileImage.cBuild(width: 100)
         profileImage.cBuild(height: 100)
+        
+        userName.cBuild { (make) in
+            make.top.equal(to: profileImage.bottomAnchor, offsetBy: 5)
+            make.centerX.equal(to: profileImage.centerXAnchor)
+        }
+       
+        
+        
+        
       }
 }
