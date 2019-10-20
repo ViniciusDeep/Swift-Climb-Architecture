@@ -28,6 +28,13 @@ class ListUserMainView: UIViewController {
     }
     
     fileprivate func bindUI() {
+        contentView.tableView.rx.modelSelected(User.self).map{
+            InsideUserMainView($0)
+        }.subscribe(onNext: { [weak self] userViewController in
+            self?.present(userViewController, animated: true, completion: nil)
+            }).disposed(by: disposeBag)
+        
+        
        searchController.searchBar.rx.text.asObservable()
        .map { ($0 ?? "").lowercased() }
        .map { UniversityRequest(name: $0) }
