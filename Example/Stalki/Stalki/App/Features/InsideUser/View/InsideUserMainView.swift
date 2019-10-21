@@ -22,12 +22,11 @@ class InsideUserMainView: UIViewController {
         self.viewModel = InsideUserViewModel(user)
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view = contentView
-        contentView.tableView.rx.setDelegate(self)
-        .disposed(by: disposeBag)
+        contentView.tableView.rx.setDataSource(self).disposed(by: disposeBag)
+        contentView.tableView.rx.setDelegate(self).disposed(by: disposeBag)
         bindUI()
     }
     
@@ -42,8 +41,7 @@ extension InsideUserMainView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
-        cell.backgroundColor = .black
+        let cell = tableView.dequeueReusableCell(withIdentifier: EventCell.reuseIdentifier, for: indexPath) as! EventCell
         return cell
     }
     

@@ -16,6 +16,8 @@
 		790ECD91235CC31C007BBA1B /* InsideUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790ECD90235CC31C007BBA1B /* InsideUserViewModel.swift */; };
 		790ECD93235D0379007BBA1B /* InsideUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790ECD92235D0379007BBA1B /* InsideUserService.swift */; };
 		790ECD95235D087A007BBA1B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790ECD94235D087A007BBA1B /* Event.swift */; };
+		790ECD97235D316F007BBA1B /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790ECD96235D316F007BBA1B /* EventCell.swift */; };
+		790ECD99235D3178007BBA1B /* CardEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790ECD98235D3178007BBA1B /* CardEventView.swift */; };
 		7918F6BC235B711600CBF97E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918F6BB235B711600CBF97E /* AppDelegate.swift */; };
 		7918F6BE235B711600CBF97E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918F6BD235B711600CBF97E /* SceneDelegate.swift */; };
 		7918F6C5235B711A00CBF97E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7918F6C4235B711A00CBF97E /* Assets.xcassets */; };
@@ -55,6 +57,8 @@
 		790ECD90235CC31C007BBA1B /* InsideUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideUserViewModel.swift; sourceTree = "<group>"; };
 		790ECD92235D0379007BBA1B /* InsideUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideUserService.swift; sourceTree = "<group>"; };
 		790ECD94235D087A007BBA1B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		790ECD96235D316F007BBA1B /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		790ECD98235D3178007BBA1B /* CardEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardEventView.swift; sourceTree = "<group>"; };
 		7918F6B8235B711600CBF97E /* Stalki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stalki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7918F6BB235B711600CBF97E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7918F6BD235B711600CBF97E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 				790ECD87235C7E8D007BBA1B /* InsideUserMainView.swift */,
 				790ECD89235C8089007BBA1B /* InsideUserContentView.swift */,
 				790ECD8E235CBF73007BBA1B /* InsideUserHeader.swift */,
+				790ECD96235D316F007BBA1B /* EventCell.swift */,
+				790ECD98235D3178007BBA1B /* CardEventView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -497,8 +503,10 @@
 				79E74108235BC2E900371FDA /* ListUserCell.swift in Sources */,
 				7983F97F235B734500E24113 /* ListUsersMainView.swift in Sources */,
 				79E740FE235B922200371FDA /* ListUsersContentView.swift in Sources */,
+				790ECD99235D3178007BBA1B /* CardEventView.swift in Sources */,
 				7918F6BC235B711600CBF97E /* AppDelegate.swift in Sources */,
 				790ECD88235C7E8D007BBA1B /* InsideUserMainView.swift in Sources */,
+				790ECD97235D316F007BBA1B /* EventCell.swift in Sources */,
 				7983F982235B756900E24113 /* Service.swift in Sources */,
 				790ECD8A235C8089007BBA1B /* InsideUserContentView.swift in Sources */,
 				79E740FC235B861400371FDA /* SearchController.swift in Sources */,

@@ -12,24 +12,27 @@ struct InsideUserService {
     
     fileprivate var baseUrl: URL?
     
-    
     init(nameUser: String) {
         let urlAsString = "https://api.github.com/users/\(nameUser)/events"
         guard let url = URL(string: urlAsString) else {return}
         self.baseUrl = url
     }
     
-//
-//    func getEvents() -> Observable<User> {
-//        return Observable<User>.create({ observer in
-//            let task = URLSession.shared.dataTask(with: baseUrl) { (data, response, error) in
-//                do {
-//
-//                }
-//            }
-//        })
-//    }
-    
-    
-    
+
+    func getEventsFromUser() -> Observable<[Event]> {
+        return Observable<[Event]>.create({ observer in
+            let task = URLSession.shared.dataTask(with: self.baseUrl!) { (data, response, error) in
+                do {
+                    let events = try JSONDecoder().decode([Event].self, from: data ?? Data())
+                    observer.onNext(events)
+                } catch let error {
+                    observer.onError(error)
+                }
+            }
+            task.resume()
+            return Disposables.create{
+                task.cancel()
+            }
+        })
+    }
 }
