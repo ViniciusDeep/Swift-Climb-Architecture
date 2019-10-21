@@ -14,8 +14,7 @@ class CardEventView: UIView, ConfigurableView {
            $0.layer.cornerRadius = 8
            $0.cBuild(width: 40)
            $0.cBuild(height: 40)
-           $0.contentMode = .scaleAspectFill
-           $0.image = UIImage(named: "fork")
+           $0.contentMode = .scaleAspectFit
            $0.layer.masksToBounds = true
        }
        
@@ -23,7 +22,6 @@ class CardEventView: UIView, ConfigurableView {
          $0.textAlignment = .center
          $0.lineBreakMode = .byWordWrapping
          $0.font = UIFont.italicSystemFont(ofSize: 14)
-         $0.text = "Fork at: "
          $0.textColor = .lightGray
        }
     
@@ -32,7 +30,6 @@ class CardEventView: UIView, ConfigurableView {
         $0.textColor = .black
         $0.lineBreakMode = .byWordWrapping
         $0.font = UIFont.boldSystemFont(ofSize: 14)
-        $0.text = "cardoso/ReduxMovieDB"
     }
     
     override init(frame: CGRect) {

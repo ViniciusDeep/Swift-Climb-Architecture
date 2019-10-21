@@ -10,6 +10,16 @@ import SDWebImage
 
 class EventCell: UITableViewCell {
     
+    
+    var viewModel: EventCellViewModel! {
+        didSet {
+            cardEventView.categorieEvent.text = "\(viewModel.categorieEvent) At "
+            cardEventView.repositorieEvent.text = viewModel.repoName
+            cardEventView.profileImage.image = UIImage(named: viewModel.categorieEvent)
+        }
+    }
+    
+    
     private weak var shadowView: UIView?
     
     let cardEventView = CardEventView()

@@ -37,7 +37,7 @@ class InsideUserMainView: UIViewController {
             return events
         }).bind(to: contentView.tableView.rx.items(cellIdentifier: EventCell.reuseIdentifier)) { index, model, cell in
             guard let cell = cell as? EventCell else {return}
-            cell.cardEventView.categorieEvent.text = model.type
+            cell.viewModel = EventCellViewModel(model)
         }.disposed(by: disposeBag)
     }
 }
