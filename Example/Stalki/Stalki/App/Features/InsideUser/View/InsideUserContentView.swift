@@ -13,7 +13,8 @@ class InsideUserContentView: UIView, ConfigurableView {
     let tableView = UITableView(frame: .zero, style: .grouped).then {
         $0.register(EventCell.self, forCellReuseIdentifier: EventCell.reuseIdentifier)
         $0.backgroundColor = .backgroundColor
-        $0.rowHeight = 100
+        $0.rowHeight = 150
+        $0.separatorStyle = .none
     }
    
     override init(frame: CGRect) {

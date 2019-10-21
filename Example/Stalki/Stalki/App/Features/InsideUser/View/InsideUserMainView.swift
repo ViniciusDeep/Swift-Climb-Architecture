@@ -17,35 +17,29 @@ class InsideUserMainView: UIViewController {
     
     let disposeBag = DisposeBag()
     
+    var apiClient: InsideUserService?
+    
     convenience init(_ user: User) {
         self.init()
         self.viewModel = InsideUserViewModel(user)
+        self.apiClient = InsideUserService(nameUser: user.userName)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view = contentView
-        contentView.tableView.rx.setDataSource(self).disposed(by: disposeBag)
-        contentView.tableView.rx.setDelegate(self).disposed(by: disposeBag)
         bindUI()
     }
     
     fileprivate func bindUI() {
-        
+        navigationItem.title = viewModel?.user?.userName ?? "PlaceHolder"
+        apiClient?.getEventsFromUser().map({ events in
+            return events
+        }).bind(to: contentView.tableView.rx.items(cellIdentifier: EventCell.reuseIdentifier)) { index, model, cell in
+            guard let cell = cell as? EventCell else {return}
+            cell.cardEventView.categorieEvent.text = model.type
+        }.disposed(by: disposeBag)
     }
 }
 
-extension InsideUserMainView: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: EventCell.reuseIdentifier, for: indexPath) as! EventCell
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return InsideUserHeader()
-    }
-}
+

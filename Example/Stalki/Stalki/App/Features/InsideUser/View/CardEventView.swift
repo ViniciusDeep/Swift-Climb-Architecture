@@ -12,20 +12,28 @@ class CardEventView: UIView, ConfigurableView {
     
     let profileImage = UIImageView().then {
            $0.layer.cornerRadius = 8
-           $0.cBuild(width: 65)
-           $0.cBuild(height: 65)
-           $0.contentMode = .scaleAspectFit
-        $0.image = UIImage(named: "fork")
+           $0.cBuild(width: 40)
+           $0.cBuild(height: 40)
+           $0.contentMode = .scaleAspectFill
+           $0.image = UIImage(named: "fork")
            $0.layer.masksToBounds = true
        }
        
-       let userName = UILabel().then {
+       let categorieEvent = UILabel().then {
          $0.textAlignment = .center
-         $0.textColor = .black
          $0.lineBreakMode = .byWordWrapping
-         $0.font = UIFont.italicSystemFont(ofSize: 26)
+         $0.font = UIFont.italicSystemFont(ofSize: 14)
+         $0.text = "Fork at: "
+         $0.textColor = .lightGray
        }
     
+    let repositorieEvent = UILabel().then {
+        $0.textAlignment = .center
+        $0.textColor = .black
+        $0.lineBreakMode = .byWordWrapping
+        $0.font = UIFont.boldSystemFont(ofSize: 14)
+        $0.text = "cardoso/ReduxMovieDB"
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,7 +54,7 @@ class CardEventView: UIView, ConfigurableView {
     
     
     func buildViewHierarchy() {
-        addSubviews([profileImage,userName])
+        addSubviews([profileImage,categorieEvent, repositorieEvent])
     }
     
     func setupConstraints() {
@@ -56,9 +64,17 @@ class CardEventView: UIView, ConfigurableView {
                  make.leading.equal(to: leadingAnchor, offsetBy: 10)
              }
              
-             userName.cBuild { (make) in
+             categorieEvent.cBuild { (make) in
                  make.top.equal(to: profileImage.topAnchor, offsetBy: 0)
-                 make.leading.equal(to: profileImage.trailingAnchor, offsetBy: 10)
+                 make.leading.equal(to: profileImage.trailingAnchor, offsetBy: 2)
              }
+        
+        repositorieEvent.cBuild { (make) in
+            make.top.equal(to: categorieEvent.topAnchor, offsetBy: 0)
+            make.leading.equal(to: categorieEvent.trailingAnchor, offsetBy: 2)
+            
+        }
+        
+        
     }
 }

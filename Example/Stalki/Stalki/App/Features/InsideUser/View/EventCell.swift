@@ -12,13 +12,11 @@ class EventCell: UITableViewCell {
     
     private weak var shadowView: UIView?
     
-    let cardUserView = CardEventView()
+    let cardEventView = CardEventView()
        
     static var reuseIdentifier: String {
         return String(describing: self)
     }
-    
-   
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -33,11 +31,11 @@ class EventCell: UITableViewCell {
     }
     
     func buildViewHierarchy() {
-        addSubviews([cardUserView])
+        addSubviews([cardEventView])
     }
     
     func setupConstraints() {
-        cardUserView.cBuild { (make) in
+        cardEventView.cBuild { (make) in
             make.top.equal(to: topAnchor, offsetBy: 16)
             make.leading.equal(to: leadingAnchor, offsetBy: 16)
             make.bottom.equal(to: bottomAnchor, offsetBy: -16)
@@ -47,7 +45,7 @@ class EventCell: UITableViewCell {
     
     private func configureShadow(){
         self.shadowView?.removeFromSuperview()
-        let shadowView = UIView(frame: CGRect(x: cardUserView.frame.origin.x, y: cardUserView.frame.origin.y, width: cardUserView.frame.width + 5  , height: cardUserView.frame.height + 5))
+        let shadowView = UIView(frame: CGRect(x: cardEventView.frame.origin.x, y: cardEventView.frame.origin.y, width: cardEventView.frame.width + 5  , height: cardEventView.frame.height + 5))
         insertSubview(shadowView, at: 0)
         self.shadowView = shadowView
         self.applyShadow(width: CGFloat(5), height: CGFloat(5))
@@ -55,7 +53,7 @@ class EventCell: UITableViewCell {
     
     private func applyShadow(width: CGFloat, height: CGFloat) {
         if let shadowView = shadowView {
-            let shadowPath = UIBezierPath(roundedRect: cardUserView.bounds, cornerRadius: 10)
+            let shadowPath = UIBezierPath(roundedRect: cardEventView.bounds, cornerRadius: 10)
             shadowView.layer.masksToBounds = false
             shadowView.layer.shadowRadius = 3
             shadowView.layer.shadowColor = UIColor.black.cgColor
