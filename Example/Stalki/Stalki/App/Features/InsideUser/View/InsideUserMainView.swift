@@ -38,6 +38,16 @@ class InsideUserMainView: UIViewController {
         }).bind(to: contentView.tableView.rx.items(cellIdentifier: EventCell.reuseIdentifier)) { index, model, cell in
             guard let cell = cell as? EventCell else {return}
             cell.viewModel = EventCellViewModel(model)
+            
+            let gesture = UITapGestureRecognizer()
+            
+            cell.cardEventView.repositorieEvent.addGestureRecognizer(gesture)
+            
+            gesture.rx.event.bind(onNext: {_ in
+                //Made action to show repo
+            }).disposed(by: self.disposeBag)
+            
+            
         }.disposed(by: disposeBag)
     }
 }

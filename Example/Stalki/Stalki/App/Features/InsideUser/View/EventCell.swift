@@ -16,6 +16,7 @@ class EventCell: UITableViewCell {
             cardEventView.categorieEvent.text = "\(viewModel.categorieEvent) At "
             cardEventView.repositorieEvent.text = viewModel.repoName
             cardEventView.profileImage.image = UIImage(named: viewModel.categorieEvent)
+            cardEventView.timeStampEvent.text = viewModel.timeStampEvent
         }
     }
     

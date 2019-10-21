@@ -10,7 +10,7 @@ import RxCocoa
 import RxSwift
 import SDWebImage
 
-class ListUserMainView: UIViewController {
+class ListUserMainView: UIViewController, UISearchBarDelegate {
     
     var searchController = UISearchController(searchResultsController: nil)
     
@@ -63,9 +63,4 @@ class ListUserMainView: UIViewController {
                         textFieldInsideSearchBar?.textColor = .titleColor
 
     }
-}
-
-extension ListUserMainView: UISearchBarDelegate {
-    
-    
 }

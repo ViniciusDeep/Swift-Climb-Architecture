@@ -11,7 +11,13 @@ import Foundation
 struct Event: Decodable {
     let type: String
     let repo: Repo
+    let timeStamp: String
     
+    enum CodingKeys: String, CodingKey {
+        case type
+        case repo
+        case timeStamp = "created_at"
+    }
 }
 
 

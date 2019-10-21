@@ -14,8 +14,14 @@ struct EventCellViewModel {
     
     let categorieEvent: String
     
+    
+    let timeStampEvent: String
+    
     init(_ event: Event) {
         self.repoName = event.repo.name
+        
+        self.timeStampEvent = event.timeStamp
+        
         switch event.type {
         case CategoriesEvent.push.rawValue:
             self.categorieEvent = "Pushed"
@@ -34,7 +40,7 @@ struct EventCellViewModel {
         case CategoriesEvent.commited.rawValue:
                    self.categorieEvent = "Commited"
         case CategoriesEvent.pullRequestReview.rawValue:
-                           self.categorieEvent = "Reviewed"
+                   self.categorieEvent = "Reviewed"
         case CategoriesEvent.watched.rawValue:
             self.categorieEvent = "Watched"
         case CategoriesEvent.member.rawValue:

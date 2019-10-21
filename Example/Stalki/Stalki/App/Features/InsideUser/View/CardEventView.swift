@@ -29,6 +29,14 @@ class CardEventView: UIView, ConfigurableView {
         $0.lineBreakMode = .byWordWrapping
         $0.font = UIFont.boldSystemFont(ofSize: 14)
         $0.numberOfLines = 0
+        $0.isUserInteractionEnabled = true
+    }
+    
+    let timeStampEvent = UILabel().then {
+        $0.textColor = .lightGray
+        $0.lineBreakMode = .byWordWrapping
+        $0.numberOfLines = 0
+        $0.font = .italicSystemFont(ofSize: 16)
     }
     
     override init(frame: CGRect) {
@@ -50,7 +58,7 @@ class CardEventView: UIView, ConfigurableView {
     
     
     func buildViewHierarchy() {
-        addSubviews([profileImage,categorieEvent, repositorieEvent])
+        addSubviews([profileImage,categorieEvent, repositorieEvent,timeStampEvent])
     }
     
     func setupConstraints() {
@@ -69,6 +77,11 @@ class CardEventView: UIView, ConfigurableView {
             make.top.equal(to: categorieEvent.topAnchor, offsetBy: 0)
             make.leading.equal(to: categorieEvent.trailingAnchor, offsetBy: 5)
             make.trailing.equal(to: trailingAnchor, offsetBy: -5)
+        }
+        
+        timeStampEvent.cBuild { (make) in
+            make.trailing.equal(to: trailingAnchor, offsetBy: -10)
+            make.bottom.equal(to: bottomAnchor, offsetBy: -5)
         }
         
         
