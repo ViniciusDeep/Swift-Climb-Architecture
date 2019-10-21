@@ -19,17 +19,16 @@ class CardEventView: UIView, ConfigurableView {
        }
        
        let categorieEvent = UILabel().then {
-         $0.textAlignment = .center
          $0.lineBreakMode = .byWordWrapping
          $0.font = UIFont.italicSystemFont(ofSize: 14)
          $0.textColor = .lightGray
        }
     
     let repositorieEvent = UILabel().then {
-        $0.textAlignment = .center
         $0.textColor = .black
         $0.lineBreakMode = .byWordWrapping
         $0.font = UIFont.boldSystemFont(ofSize: 14)
+        $0.numberOfLines = 0
     }
     
     override init(frame: CGRect) {
@@ -63,13 +62,13 @@ class CardEventView: UIView, ConfigurableView {
              
              categorieEvent.cBuild { (make) in
                  make.top.equal(to: profileImage.topAnchor, offsetBy: 0)
-                 make.leading.equal(to: profileImage.trailingAnchor, offsetBy: 2)
+                 make.leading.equal(to: profileImage.trailingAnchor, offsetBy: 5)
              }
         
         repositorieEvent.cBuild { (make) in
             make.top.equal(to: categorieEvent.topAnchor, offsetBy: 0)
-            make.leading.equal(to: categorieEvent.trailingAnchor, offsetBy: 2)
-            
+            make.leading.equal(to: categorieEvent.trailingAnchor, offsetBy: 5)
+            make.trailing.equal(to: trailingAnchor, offsetBy: -5)
         }
         
         
