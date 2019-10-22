@@ -6,4 +6,15 @@
 //  Copyright © 2019 Vinicius Mangueira. All rights reserved.
 //
 
-import Foundation
+import RxCocoa
+import RxSwift
+
+class InsideRepoMainView: UIViewController {
+    
+    let contentView = InsideRepoContentView()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view = contentView
+    }
+}

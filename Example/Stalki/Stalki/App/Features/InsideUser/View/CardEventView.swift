@@ -16,6 +16,7 @@ class CardEventView: UIView, ConfigurableView {
            $0.cBuild(height: 40)
            $0.contentMode = .scaleAspectFit
            $0.layer.masksToBounds = true
+        
        }
        
        let categorieEvent = UILabel().then {

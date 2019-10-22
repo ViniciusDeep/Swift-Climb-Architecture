@@ -12,7 +12,7 @@ extension UISearchController {
     convenience init(navigationController: UINavigationController?, viewController: ListUserMainView) {
         self.init(searchResultsController: nil)
              definesPresentationContext = true
-                       navigationController?.navigationBar.tintColor = .actionColor
+                       navigationController?.navigationBar.tintColor = .titleColor
         viewController.navigationItem.searchController = self
                        navigationItem.hidesSearchBarWhenScrolling = false
                        self.searchBar.delegate = viewController

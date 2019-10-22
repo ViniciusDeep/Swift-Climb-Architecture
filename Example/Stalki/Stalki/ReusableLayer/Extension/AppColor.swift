@@ -18,4 +18,5 @@ extension UIColor {
     static let subTitleColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
     static let actionColor = #colorLiteral(red: 0.9254901961, green: 0.337254902, blue: 0.3450980392, alpha: 1)
     static let tabBarIcon = #colorLiteral(red: 0.4666666667, green: 0.4588235294, blue: 0.6078431373, alpha: 1)
+    static let gitColor = #colorLiteral(red: 0.1490196078, green: 0.1490196078, blue: 0.1490196078, alpha: 1)
 }

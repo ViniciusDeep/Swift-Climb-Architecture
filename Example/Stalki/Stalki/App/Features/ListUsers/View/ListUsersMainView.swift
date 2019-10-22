@@ -55,7 +55,7 @@ class ListUserMainView: UIViewController, UISearchBarDelegate {
     fileprivate func setupNavigationBar() {
                   navigationController?.navigationBar.barStyle = .black
                   definesPresentationContext = true
-                           navigationController?.navigationBar.tintColor = .actionColor
+                           navigationController?.navigationBar.tintColor = .titleColor
                            navigationItem.searchController = self.searchController
                            navigationItem.hidesSearchBarWhenScrolling = false
                            searchController.searchBar.delegate = self

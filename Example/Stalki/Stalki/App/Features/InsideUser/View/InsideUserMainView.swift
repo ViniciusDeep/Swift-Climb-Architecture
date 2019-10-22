@@ -28,6 +28,7 @@ class InsideUserMainView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = contentView
+        contentView.tableView.rx.setDelegate(self).disposed(by: disposeBag)
         bindUI()
     }
     
@@ -39,16 +40,33 @@ class InsideUserMainView: UIViewController {
             guard let cell = cell as? EventCell else {return}
             cell.viewModel = EventCellViewModel(model)
             
-            let gesture = UITapGestureRecognizer()
+            let gestureToLabel = UITapGestureRecognizer()
+            let gestureToCard = UITapGestureRecognizer()
             
-            cell.cardEventView.repositorieEvent.addGestureRecognizer(gesture)
+            cell.cardEventView.repositorieEvent.addGestureRecognizer(gestureToLabel)
             
-            gesture.rx.event.bind(onNext: {_ in
-                //Made action to show repo
+            cell.cardEventView.addGestureRecognizer(gestureToCard)
+            
+            gestureToLabel.rx.event.bind(onNext: {_ in
+                self.navigationController?.pushViewController(InsideRepoMainView(), animated: true)
+                
+            }).disposed(by: self.disposeBag)
+            
+            
+            gestureToCard.rx.event.bind(onNext: {_ in
+               // Show completed event
             }).disposed(by: self.disposeBag)
             
             
         }.disposed(by: disposeBag)
+    }
+}
+
+extension InsideUserMainView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = InsideUserHeader()
+        header.viewModel = self.viewModel
+        return header
     }
 }
 

@@ -6,10 +6,18 @@
 //  Copyright © 2019 Vinicius Mangueira. All rights reserved.
 //
 
-import UIKit
+import SDWebImage
 
 class InsideUserHeader: UIView, ConfigurableView {
   
+    var viewModel: InsideUserViewModel! {
+        didSet {
+            profileImage.sd_setImage(with: URL(string: viewModel.user!.imageUrl)!)
+            userName.text = viewModel.user?.userName
+        }
+    }
+    
+    
     let profileImage = UIImageView().then{
         $0.contentMode = .scaleAspectFit
         $0.image = UIImage(named: "devxoul")
@@ -51,9 +59,5 @@ class InsideUserHeader: UIView, ConfigurableView {
             make.top.equal(to: profileImage.bottomAnchor, offsetBy: 5)
             make.centerX.equal(to: profileImage.centerXAnchor)
         }
-       
-        
-        
-        
       }
 }
