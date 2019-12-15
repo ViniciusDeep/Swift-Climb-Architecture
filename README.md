@@ -39,10 +39,13 @@ In Example, you can see how this Architeture works
 * [Digital Space](https://github.com/ViniciusDeep/Digital-Space) 
 
 
-## Author 
+## Authors
 
 * [Vinicius Deep](https://github.com/ViniciusDeep) 
 * [Matheus Dasmasceno](https://github.com/damascenomatheus) 
+* [Guilherme Araujo](https://github.com/guimbo) 
+* [Alan Victor](https://github.com/AlanVic) 
+* [Mario Matheus](https://github.com/MarioMatheus) 
 
 
 ## License
